@@ -11,7 +11,7 @@ The IAI Slide Driver aims to provide an intuitive and simple interface that cont
 - Preset section where user can create a preset of the current position and return to the position through the preset.
 
 The project tested my ability to convert between hexadecimal and decimal formats and working with registers.
-Finally, I had to design queue loop for the serial communication to ensure that a read command and write command could never happen at the same time which would cause the slide to error.
+If a read and write command are sent at the same time, the IAI slide stops working. To solve this, a queue loop for the serial communication to ensure that two read / write commands cannot happen at the same time.
 
 ## Usage
 

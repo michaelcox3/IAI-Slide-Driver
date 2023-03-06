@@ -3,11 +3,12 @@
 ## Description
 
 The IAI Slide Driver aims to provide an intuitive and simple interface that controls PCON or SCON slides distributed by IAI America.\
-Implements basic control functions such as absolute move, incremental move, jogging and inching.\
-Provides the user access to safety parameters such as amp limits in either direction.\
-Displays status information such as position, speed, and motor draw.\
-Handles errors thrown by the slide and is designed to halt when an error is detected.\
-Automatically populates the COM Port drop down menu with any COM ports detected by windows.\
+- Implements basic control functions such as absolute move, incremental move, jogging and inching.\
+- Provides the user access to safety parameters such as amp limits in either direction.\
+- Displays status information such as position, speed, and motor draw.\
+- Handles errors thrown by the slide and is designed to halt when an error is detected.\
+- Automatically populates the COM Port drop down menu with any COM ports detected by windows.\
+- Preset section where user can create a preset of the current position and return to the position through the preset.\
 
 The project introduced me to incremental encoders. I learned that in order to perform an absolute move, the slide must be homed first.
 Additionally, the project tested my ability to convert between hexadecimal and decimal formats and working with registers.
@@ -15,14 +16,17 @@ Finally, I had to design queue loop for the serial communication to ensure that 
 
 ## Usage
 
-The following control commands are implemented
-    - Set Power\
+The following control commands are implemented:
+    - Connect/Disconnect to COM Port
+    - Set Servo Power\
     - Reset Alarm\
     - Home\
     - Inch Up\
     - Inch Down\
     - Jog Up\
     - Jog Down\
+    - Stop Motion\
+    - Absolute Move\
     
 Provide instructions and examples for use. Include screenshots as needed.
 
@@ -33,12 +37,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
 ## Credits
+This project uses the "EasyModbusDLL" library from the "EasyModbusTCP.NET" GitHub repository. 
+Copyright (c) 2018-2020 Rossmann-Engineering. For more information, see [https://github.com/rossmann-engineering/EasyModbusTCP.NET](https://github.com/rossmann-engineering/EasyModbusTCP.NET).
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
 
 ## License
 

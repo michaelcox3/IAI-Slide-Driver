@@ -10,8 +10,7 @@ The IAI Slide Driver aims to provide an intuitive and simple interface that cont
 - Automatically populates the COM Port drop down menu with COM ports detected by windows.
 - Preset section where user can create a preset of the current position and return to the position through the preset.
 
-The project introduced me to incremental encoders. I learned that in order to perform an absolute move, the slide must be homed first.
-Additionally, the project tested my ability to convert between hexadecimal and decimal formats and working with registers.
+The project tested my ability to convert between hexadecimal and decimal formats and working with registers.
 Finally, I had to design queue loop for the serial communication to ensure that a read command and write command could never happen at the same time which would cause the slide to error.
 
 ## Usage
@@ -26,7 +25,7 @@ The following control commands are implemented:
 - Jog Up
 - Jog Down
 - Stop Motion
-- Absolute Move
+- Absolute Move (Must be homed first!)
     
 ![alt text](assets/images/screenshot.JPG)
 

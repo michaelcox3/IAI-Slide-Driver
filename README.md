@@ -3,6 +3,7 @@
 ## Description
 
 The IAI Slide Driver aims to provide an intuitive and simple interface that controls PCON or SCON slides distributed by IAI America. It implements basic control functions such as absolute move, incremental move, jogging and inching. It provides the user access to safety parameters such as amp limits in either direction. It displays status information such as position, speed, and motor draw. It handles errors thrown by the slide and is designed to halt when an error is detected.
+
 The project introduced me to incremental encoders. I learned that in order to perform an absolute move, the slide must be homed first.
 Additionally, the project tested my ability to convert between hexadecimal and decimal formats and working with registers.
 Finally, I had to design queue loop for the serial communication to ensure that a read command and write command could never happen at the same time which would cause the slide to error.

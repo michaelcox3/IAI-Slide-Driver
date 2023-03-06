@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{FFF9E8DA-70BF-4FC5-B486-08D8C0B48F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCONController", "PCONController\PCONController.csproj", "{F804C119-2741-467C-8649-0037F4F3B2BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFF9E8DA-70BF-4FC5-B486-08D8C0B48F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF9E8DA-70BF-4FC5-B486-08D8C0B48F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF9E8DA-70BF-4FC5-B486-08D8C0B48F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF9E8DA-70BF-4FC5-B486-08D8C0B48F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F804C119-2741-467C-8649-0037F4F3B2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F804C119-2741-467C-8649-0037F4F3B2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F804C119-2741-467C-8649-0037F4F3B2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F804C119-2741-467C-8649-0037F4F3B2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D49FCA6-37DF-4E2B-94F4-B28C586ED982}
+	EndGlobalSection
+EndGlobal

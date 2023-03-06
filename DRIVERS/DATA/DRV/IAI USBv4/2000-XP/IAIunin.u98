@@ -1,0 +1,10 @@
+*VID_10C4&PID_81D7*
+IAI
+IAIbus.inf
+IAIwdm.inf
+slabvxd.inf
+NoQuiet
+NoLeaveSource
+IAICOMM&10C4&81D7
+C\IAI USB\MCU\CP210x\WIN
+\\192.168.12.3\開発部\ソフトウェア課\Software\USB変換ｱﾀﾞﾌﾟﾀのﾄﾞﾗｲﾊﾞ\V5.04.29.00\IAI USBv2\2000-XPC\IAI USB\MCU\CP210x\WIN

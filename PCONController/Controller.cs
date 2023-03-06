@@ -211,13 +211,11 @@ namespace PCONController
         //private ConcurrentQueue<bool> readCoilQueue = new ConcurrentQueue<bool>();
         private ConcurrentQueue<KeyValuePair<int, int>> readRegistersQueue = new ConcurrentQueue<KeyValuePair<int, int>>();
         
-        private Stopwatch clock = new Stopwatch();
 
         private String port = "COM1";
         private int baud = 38400;
         public int ampLimit = 350;
         public bool ampLimitActive = true;
-        //public bool loopActive = false;
 
         public string Port { get => port; set => port = value; }
         public int Baud { get => baud; set => baud = value; }
@@ -321,7 +319,7 @@ namespace PCONController
         #region Control Methods
         public void AbsoluteMove(double position)
         {
-            //convert mm to 0.01mm (thats what the slider reads)
+            // Convert mm to 0.01mm (thats what the slider reads)
             int positionInt = (int)(Math.Round(position, 2) * 100);
 
             String hexString = positionInt.ToString("X");
@@ -344,9 +342,10 @@ namespace PCONController
 
         public void AbsoluteMove(double position, int speed)
         {
-            //convert mm to 0.01mm (thats what the slider reads)
+            // Convert mm to 0.01mm (thats what the slider reads)
             int positionInt = (int)(Math.Round(position, 2) * 100);
 
+            // Convert decimal to hex
             String hexString = positionInt.ToString("X");
             int pos = int.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
             int posLo = pos & 0x0000FFFF;
@@ -446,6 +445,7 @@ namespace PCONController
             int accel = (int)(Math.Round(input, 2) * 100);
             String hexString = accel.ToString("X");
             int hex = int.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
+
             WriteHoldingRegister(REG_CMD_ACMD, hex);
         }
 
@@ -457,7 +457,6 @@ namespace PCONController
 
         public void SetSpeed(int speed)
         {
-            //Console.WriteLine("Entered SetSpeed method");
             String hexString = speed.ToString("X");
             int hex = int.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
             WriteHoldingRegister(REG_CMD_VCMD + 1, hex);
@@ -479,22 +478,19 @@ namespace PCONController
         // Read a single coil at register
         public bool ReadCoil(int register) 
         {
+            bool result = false;
             if (modbusClient.Connected)
             {
-                bool result = false;
                 try
                 {
                     result = modbusClient.ReadCoils(register, 1)[0];
-                    //Console.WriteLine("looping for some reason");
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    //Thread.Sleep(20);
-                    //Console.WriteLine(e);
+                    Console.WriteLine(e);
                 }
-                return result;
             }
-            return false;
+            return result;
         }
 
         // Read multiple coils starting at a register
@@ -508,7 +504,6 @@ namespace PCONController
         {
             if (modbusClient.Connected)
             {
-                //modbusClient.WriteSingleCoil(register, bit);
                 writeCoilQueue.Enqueue(new KeyValuePair<int, bool>(register, bit));
             }
         }
@@ -523,25 +518,23 @@ namespace PCONController
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return -1;
             }
-            
-            //readRegisterQueue.Enqueue(register);
+            return -1;
         }
 
         // Read multiple holding registers
         public void ReadHoldingRegisters(int register, int quantity)
         {
-            try
+            if (modbusClient.Connected)
             {
-                if (modbusClient.Connected)
+                try
                 {
                     readRegistersQueue.Enqueue(new KeyValuePair<int, int>(register, quantity));
                 }
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e);
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
             }
         }
 
@@ -550,7 +543,6 @@ namespace PCONController
         {
             if (modbusClient.Connected)
             {
-                //modbusClient.WriteSingleRegister(register, value);
                 writeRegisterQueue.Enqueue(new KeyValuePair<int, int>(register, value));
             }
         }
@@ -559,11 +551,9 @@ namespace PCONController
         {
             if (modbusClient.Connected)
             {
-                //modbusClient.WriteSingleRegister(register, value);
                 writeRegistersQueue.Enqueue(new KeyValuePair<int, int[]>(register, value));
             }
         }
-
         #endregion
 
 
@@ -572,7 +562,6 @@ namespace PCONController
         // All write and read calls are dequeued
         public void SerialQueueLoop()
         {
-            //clock.Start();
             while (true)
             {
                 if (modbusClient.Connected)

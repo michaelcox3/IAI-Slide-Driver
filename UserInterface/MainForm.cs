@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Windows.Forms;
 using PCONController;
+using System.Threading;
 
 namespace IAIProject
 {
@@ -70,7 +71,7 @@ namespace IAIProject
         {
             slide.AlarmReset();
             slide.SetPower(false);
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(100);
             slide.CloseThreads();
 
             //Save AmpLimit values
@@ -244,17 +245,26 @@ namespace IAIProject
             {
                 File.Create(file);
             }
+            string fullFilePath = Path.Combine(Directory.GetCurrentDirectory(), file);
+            Console.Write("Path : " + fullFilePath);
             ReadPresets(file);
         }
 
         public void SavePresets()
         {
-            StreamWriter streamWriter = new StreamWriter(file);
-            foreach(Preset preset in presetList)
+            try
             {
-                streamWriter.WriteLine(preset.name + ", " + preset.position);
+                StreamWriter streamWriter = new StreamWriter(file);
+                foreach (Preset preset in presetList)
+                {
+                    Console.WriteLine(preset.name);
+                    streamWriter.WriteLine(preset.name + ", " + preset.position);
+                }
+                streamWriter.Close();
+            } catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
-            streamWriter.Close();
         }
         private void BtnGoToPreset_Click(object sender, EventArgs e)
         {
@@ -361,7 +371,7 @@ namespace IAIProject
                 Top = 0, 
                 Width = 350, 
                 Height = 150, 
-                Text = "Michael Cox (2022).\r\nIncluded in this source code is the EasyModbus library provided by Stefan Robmann."
+                Text = "Michael Cox (2023).\r\nIncluded in this source code is the EasyModbus library provided by Stefan Robmann."
             };
             aboutLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular);
             aboutLabel.TextAlign = ContentAlignment.MiddleCenter;

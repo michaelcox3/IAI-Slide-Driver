@@ -44,8 +44,7 @@ Copyright (c) 2018-2020 Rossmann-Engineering. For more information, see [https:/
 
 ## License
 
-Copyrighted under the GNU General Public License - http://www.gnu.org/licenses/
+Copyright (c) 2023 Michael Cox - GNU General Public License - http://www.gnu.org/licenses/
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
 ---

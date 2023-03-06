@@ -27,14 +27,14 @@ The following control commands are implemented:
 - Stop Motion
 - Absolute Move (Must be homed first!)
     
-![alt text](assets/images/screenshot.JPG)
+![screenshot](assets/images/screenshot.JPG)
 
 ## Credits
 
 This project uses the "EasyModbusDLL" library (V5.6) from the "EasyModbusTCP.NET" GitHub repository.\
 Copyright (c) 2018-2020 Rossmann-Engineering. For more information, see [https://github.com/rossmann-engineering/EasyModbusTCP.NET](https://github.com/rossmann-engineering/EasyModbusTCP.NET).
 
-This project builds on the "ExampleDLL" library" from the "IAI-Robotics-.NET-Drivers" GitHub repository owned by Dylan Morano.   
+This project takes snippets from the "IAI-Robotics-.NET-Drivers" GitHub repository owned by Dylan Morano.   
 For more information, see https://github.com/dmmorano/IAI-Robotics-.NET-Drivers
 
 

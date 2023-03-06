@@ -3,7 +3,7 @@
 ## Description
 
 The IAI Slide Driver aims to provide an intuitive and simple interface that controls PCON or SCON slides distributed by IAI America.
-- Implements basic control functions such as absolute move, incremental move, jogging and inching.
+- Implements basic control functions like absolute move and incremental moves such as jogging and inching.
 - Provides the user access to safety parameters such as amp limits in either direction.
 - Displays status information such as position, speed, and motor draw.
 - Handles errors thrown by the slide and is designed to halt when an error is detected.

@@ -2,21 +2,28 @@
 
 ## Description
 
-The IAI Slide Driver aims to provide an intuitive and simple interface that controls PCON or SCON slides distributed by IAI America. It implements basic control functions such as absolute move, incremental move, jogging and inching. It provides the user access to safety parameters such as amp limits in either direction. It displays status information such as position, speed, and motor draw. It handles errors thrown by the slide and is designed to halt when an error is detected.
+The IAI Slide Driver aims to provide an intuitive and simple interface that controls PCON or SCON slides distributed by IAI America. 
+Implements basic control functions such as absolute move, incremental move, jogging and inching. 
+Provides the user access to safety parameters such as amp limits in either direction. 
+Displays status information such as position, speed, and motor draw. 
+Handles errors thrown by the slide and is designed to halt when an error is detected.
+Automatically populates the COM Port drop down menu with any COM ports detected by windows.
 
-The project introduced me to incremental encoders. I learned that in order to perform an absolute move, the slide must be homed first.
+    The project introduced me to incremental encoders. I learned that in order to perform an absolute move, the slide must be homed first.
 Additionally, the project tested my ability to convert between hexadecimal and decimal formats and working with registers.
 Finally, I had to design queue loop for the serial communication to ensure that a read command and write command could never happen at the same time which would cause the slide to error.
 
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
 ## Usage
 
-
-
+The following control commands are implemented
+    - Set Power
+    - Reset Alarm
+    - Home
+    - Inch Up
+    - Inch Down
+    - Jog Up
+    - Jog Down
+    
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:

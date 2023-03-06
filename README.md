@@ -17,16 +17,16 @@ Finally, I had to design queue loop for the serial communication to ensure that 
 ## Usage
 
 The following control commands are implemented:
-    - Connect/Disconnect to COM Port
-    - Set Servo Power\
-    - Reset Alarm\
-    - Home\
-    - Inch Up\
-    - Inch Down\
-    - Jog Up\
-    - Jog Down\
-    - Stop Motion\
-    - Absolute Move\
+- Connect/Disconnect to COM Port
+- Set Servo Power\
+- Reset Alarm\
+- Home\
+- Inch Up\
+- Inch Down\
+- Jog Up\
+- Jog Down\
+- Stop Motion\
+- Absolute Move\
     
 Provide instructions and examples for use. Include screenshots as needed.
 
@@ -37,7 +37,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
 ## Credits
-This project uses the "EasyModbusDLL" library from the "EasyModbusTCP.NET" GitHub repository. 
+This project uses the "EasyModbusDLL" library from the "EasyModbusTCP.NET" GitHub repository.\
 Copyright (c) 2018-2020 Rossmann-Engineering. For more information, see [https://github.com/rossmann-engineering/EasyModbusTCP.NET](https://github.com/rossmann-engineering/EasyModbusTCP.NET).
 
 

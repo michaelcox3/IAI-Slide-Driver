@@ -7,7 +7,7 @@ The IAI Slide Driver aims to provide an intuitive and simple interface that cont
 - Provides the user access to safety parameters such as amp limits in either direction.
 - Displays status information such as position, speed, and motor draw.
 - Handles errors thrown by the slide and is designed to halt when an error is detected.
-- Automatically populates the COM Port drop down menu with any COM ports detected by windows.
+- Automatically populates the COM Port drop down menu with COM ports detected by windows.
 - Preset section where user can create a preset of the current position and return to the position through the preset.
 
 The project introduced me to incremental encoders. I learned that in order to perform an absolute move, the slide must be homed first.
@@ -40,6 +40,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 This project uses the "EasyModbusDLL" library (V5.6) from the "EasyModbusTCP.NET" GitHub repository.\
 Copyright (c) 2018-2020 Rossmann-Engineering. For more information, see [https://github.com/rossmann-engineering/EasyModbusTCP.NET](https://github.com/rossmann-engineering/EasyModbusTCP.NET).
+
+This project builds on the "ExampleDLL" library" from the "IAI-Robotics-.NET-Drivers" GitHub repository.   
+For more information, see https://github.com/dmmorano/IAI-Robotics-.NET-Drivers
 
 
 ## License

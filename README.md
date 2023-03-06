@@ -41,7 +41,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 This project uses the "EasyModbusDLL" library (V5.6) from the "EasyModbusTCP.NET" GitHub repository.\
 Copyright (c) 2018-2020 Rossmann-Engineering. For more information, see [https://github.com/rossmann-engineering/EasyModbusTCP.NET](https://github.com/rossmann-engineering/EasyModbusTCP.NET).
 
-This project builds on the "ExampleDLL" library" from the "IAI-Robotics-.NET-Drivers" GitHub repository.   
+This project builds on the "ExampleDLL" library" from the "IAI-Robotics-.NET-Drivers" GitHub repository owned by Dylan Morano.   
 For more information, see https://github.com/dmmorano/IAI-Robotics-.NET-Drivers
 
 
